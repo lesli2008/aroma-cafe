@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Promociones - Café Aroma</title>
+<style>
+body { background-color:#f3ece7; font-family:Tahoma; text-align:center; }
+header, nav, footer { background-color:#d9b18c; padding:10px; }
+nav a { margin:10px; color:#4b2e05; text-decoration:none; font-weight:bold; }
+</style>
+</head>
+<body>
+<header><h1>Promociones del Día</h1></header>
+<nav>
+  <a href="index.html">Inicio</a>
+  <a href="menu.html">Menú</a>
+  <a href="promociones.html">Promociones</a>
+  <a href="galeria.html">Galería</a>
+  <a href="contacto.html">Contacto</a>
+</nav>
+
+<section>
+  <p id="promo"></p>
+  <button onclick="mostrarPromo()">Mostrar promoción</button>
+</section>
+
+<footer><p>&copy; 2025 Café Aroma</p></footer>
+
+<script>
+function mostrarPromo() {
+  const promos = [
+    "2x1 en Capuchino todo el lunes ☕",
+    "Gratis una galleta por cada café el miércoles 🍪",
+    "Descuento del 20% en postres los viernes 🍰"
+  ];
+  const aleatorio = Math.floor(Math.random() * promos.length);
+  document.getElementById("promo").innerHTML = promos[aleatorio];
+}
+</script>
+</body>
+</html>

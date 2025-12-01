@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Café Aroma - Inicio</title>
+<style>
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f8f4f0;
+  color: #4b2e05;
+  margin: 0;
+  padding: 0;
+}
+header, nav, footer {
+  background-color: #d9b18c;
+  text-align: center;
+  padding: 10px;
+}
+nav a {
+  margin: 10px;
+  text-decoration: none;
+  color: #4b2e05;
+  font-weight: bold;
+}
+section {
+  text-align: center;
+  padding: 20px;
+}
+button {
+  background-color: #b57f50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+button:hover { background-color: #8c5c35; }
+</style>
+</head>
+<body>
+<header>
+  <h1>☕ Bienvenido a Café Aroma ☕</h1>
+</header>
+
+<nav>
+  <a href="index.html">Inicio</a>
+  <a href="menu.html">Menú</a>
+  <a href="promociones.html">Promociones</a>
+  <a href="galeria.html">Galería</a>
+  <a href="contacto.html">Contacto</a>
+</nav>
+
+<section>
+  <h2>El mejor café, con el mejor ambiente</h2>
+  <p>Disfruta de nuestros granos seleccionados y deliciosos postres.</p>
+  <button onclick="mostrarMensaje()">Ver mensaje secreto ☕</button>
+</section>
+
+<footer>
+  <p>&copy; 2025 Café Aroma | Proyecto Final</p>
+</footer>
+
+<script>
+function mostrarMensaje() {
+  alert("Gracias por visitarnos. ¡Tu próxima taza te espera!");
+}
+</script>
+</body>
+</html>
+

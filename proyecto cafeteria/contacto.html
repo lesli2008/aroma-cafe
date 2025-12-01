@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Contacto y Reservaciones - Café Aroma</title>
+<style>
+body {
+  background-color:#fff8f3;
+  font-family: Verdana, sans-serif;
+  color:#4b2e05;
+  text-align:center;
+  margin:0;
+}
+header, nav, footer {
+  background-color:#d9b18c;
+  padding:10px;
+}
+nav a {
+  margin:10px;
+  color:#4b2e05;
+  text-decoration:none;
+  font-weight:bold;
+}
+section {
+  padding:20px;
+}
+input, textarea, select {
+  width:80%;
+  padding:10px;
+  margin:10px;
+  border-radius:5px;
+  border:1px solid #ccc;
+}
+button {
+  background-color:#b57f50;
+  color:white;
+  border:none;
+  padding:10px 20px;
+  border-radius:8px;
+  cursor:pointer;
+}
+button:hover { background-color:#8c5c35; }
+.redes a {
+  margin: 10px;
+  text-decoration: none;
+  font-weight: bold;
+  color: #4b2e05;
+}
+.integrantes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+.card {
+  background-color: #f6e8db;
+  border-radius: 10px;
+  padding: 15px;
+  width: 250px;
+  box-shadow: 2px 2px 8px rgba(0,0,0,0.2);
+}
+</style>
+</head>
+<body>
+<header>
+  <h1>Contáctanos y Reserva tu Mesa</h1>
+</header>
+
+<nav>
+  <a href="index.html">Inicio</a>
+  <a href="menu.html">Menú</a>
+  <a href="promociones.html">Promociones</a>
+  <a href="galeria.html">Galería</a>
+  <a href="contacto.html">Contacto</a>
+</nav>
+<hr>
+
+<section>
+  <h2>📅 Reserva tu mesa </h2>
+  <form id="formReserva">
+    <input type="text" id="nombreReserva"<br>
+    <input type="date" id="fecha"><br>
+    <input type="time" id="hora"><br>
+    <select id="personas">
+      <option value="">Número de personas</option>
+      <option>1</option>
+      <option>2</option>
+      <option>3</option>
+      <option>4</option>
+      <option>5 o más</option>
+    </select><br>
+    <button type="button" onclick="validarReserva()">Confirmar Reservación</button></form>
+  <p id="mensajeReserva"></p>
+</section>
+<hr>
+<section>
+  <div class="integrantes">
+    <div class="card">
+      <h3>Lesli Reyes</h3>
+      <p>📧 lesli.kimbita@gmail.com</p>
+    </div>
+    <div class="card">
+      <h3>Luis Angel Calixto Miranda</h3>
+      <p>📧 calixto17@gmail.com</p>
+<div class="card">
+      <h3>Jose Leonardo+</h3>
+      <p>📧 leito.lolqmal@gmail.com</p>
+    </div>
+<div class="card">
+      <h3>Brayan Zoel</h3>
+      <p>📧 brayan.tuwera@gmail.com</p>
+    </div>
+ </div>
+</section>
+
+<hr>
+
+<section>
+  <h2>🌐 Síguenos en redes sociales</h2>
+  <div class="redes">
+    <a href="https://instagram.com" target="_blank">📸 lm_leess - lm_angel</a>
+  </div>
+</section>
+
+<footer>
+  <p>&copy; 2025 Café Aroma | Proyecto escolar - Programación 5B</p>
+</footer>
+
+<script>
+function validarReserva() {
+  const nombre = document.getElementById("nombreReserva").value;
+  const fecha = document.getElementById("fecha").value;
+  const hora = document.getElementById("hora").value;
+  const personas = document.getElementById("personas").value;
+  const mensaje = document.getElementById("mensajeReserva");
+  
+  if (!nombre || !fecha || !hora || !personas) {
+    mensaje.textContent = "⚠️ Por favor, completa todos los campos antes de confirmar.";
+    mensaje.style.color = "red";
+    return;
+  }
+
+  // Cuadro de confirmación
+  const confirmar = confirm(`¿Deseas confirmar tu reserva para ${personas} persona(s) el ${fecha} a las ${hora}, ${nombre}?`);
+
+  if (confirmar) {
+    mensaje.textContent = `✅ ¡Gracias, ${nombre}! Tu reserva para ${personas} persona(s) ha sido confirmada.`;
+    mensaje.style.color = "green";
+  } else {
+    mensaje.textContent = "❌ Has cancelado la reserva.";
+    mensaje.style.color = "gray";
+  }
+}
+</script>
+</body>
+</html>

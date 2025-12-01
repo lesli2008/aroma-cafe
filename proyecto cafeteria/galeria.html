@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Galería - Café Aroma</title>
+<style>
+body { background-color:#fffdf9; font-family:Verdana; text-align:center; }
+header, nav, footer { background-color:#d9b18c; padding:10px; }
+nav a { margin:10px; color:#4b2e05; text-decoration:none; font-weight:bold; }
+img { width:200px; margin:10px; border-radius:10px; }
+</style>
+</head>
+<body>
+<header><h1>Galería</h1></header>
+<nav>
+  <a href="index.html">Inicio</a>
+  <a href="menu.html">Menú</a>
+  <a href="promociones.html">Promociones</a>
+  <a href="galeria.html">Galería</a>
+  <a href="contacto.html">Contacto</a>
+  <button onclick="abrirNuevaVentana()">Abrir nueva ventana</button>
+</nav>
+
+<section>
+  <img src="C:\Users\USER\Pictures/cafeteria.jpg" alt="vista">
+  <img src="C:\Users\USER\Pictures/interior.jpg" alt="interior">
+  <img src="C:\Users\USER\Pictures/foto.jpg" alt="foto">
+  <img src="C:\Users\USER\Pictures/comodice.jpg" alt="Bebidas">
+
+</section>
+
+<footer><p>&copy; 2025 Café Aroma</p></footer>
+
+<script>
+  function abrirNuevaVentana() {
+  window.open("https://youtu.be/7bDeB180Ngo", "NuevaVentana", "width=600=height=400");
+}
+document.body.addEventListener("dblclick", () => {
+  alert("¡Gracias por visitar nuestra galería!");
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,7 @@
+CREATE TABLE datos (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nombreReserva VARCHAR(100),
+    fecha DATE,
+    hora TIME,
+    personas VARCHAR(20)
+);
